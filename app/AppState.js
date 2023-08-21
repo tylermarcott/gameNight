@@ -1,7 +1,7 @@
 
 
 // NOTE: imported Players class from the following file. Did this easily by typing player and choosing the player class, or player tab
-import { Player } from "./models/Players.js"
+import { Player } from "./models/Player.js"
 
 
 import { Value } from "./models/Value.js"
@@ -10,7 +10,18 @@ import { isValidProp } from "./utils/isValidProp.js"
 import { loadState } from "./utils/Store.js"
 
 class ObservableAppState extends EventEmitter {
+
+  // NOTE: this is the Appstate in our MVCS diagram that is creating the app's data, which in this case is our array of 3 new Players classes
+
+  // NOTE: created 3 new instances of the player class
+  players = [
+    new Player("Shirley"),
+    new Player("Jeff"),
+    new Player("Bobbie Boy")
+  ];
+
   page = ''
+
 
   /** @type {import('./models/Value.js').Value[]} */
   values = loadState('values', [Value])
@@ -35,11 +46,3 @@ export const AppState = new Proxy(new ObservableAppState(), {
   }
 })
 
-
-
-// NOTE: this is an instance that I have created of the class that I created in Players.js
-class AppState extends EventEmitter {
-  /**@type import('./models/Player.js').Player[] */
-
-  players = new Player("Shirley");
-}
