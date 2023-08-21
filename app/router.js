@@ -1,7 +1,17 @@
+
+
+// NOTE: importing players controller to router.js
+import { PlayersController } from "./controllers/PlayersController.js";
+
+
+
+
 import { AboutController } from "./controllers/AboutController.js";
 import { HomeController } from "./controllers/HomeController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
 import { AboutView } from "./views/AboutView.js";
+
+
 
 
 export const router = [
