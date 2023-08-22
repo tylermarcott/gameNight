@@ -1,5 +1,8 @@
 
 import { AppState } from "../AppState.js";
+import { playerService } from "../services/PlayerService.js";
+
+// NOTE: importing our playerService method from our service
 
 
 
@@ -28,9 +31,12 @@ export class PlayersController {
   }
 
 
-
+  // NOTE: referencing playerService from our service file in order to call scorePoint in service, with our passed playerName argument, and modify the player score. Service is the only file that should be modifying data. Then we draw this instance to the page.
 
   scorePoint(playerName) {
     console.log(playerName, 'clicked the button')
+
+    playerService.scorePoint(playerName)
+    this.drawPlayers()
   }
 }
