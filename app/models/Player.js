@@ -21,7 +21,8 @@ export class Player {
         <div class="card-body">
           ${this.name} - ${this.score}
         </div>
-        <button class="btn" onclick="app.PlayersController.scorePoint()">Bootin!</button>
+        <button class="btn" onclick="app.PlayersController.scorePoint('${this.name}')">Bootin!</button>
     </div>`
+    // NOTE: above, we use quotes around string interpolation to work around system, issues arise when using just normal interpolation
   }
 }

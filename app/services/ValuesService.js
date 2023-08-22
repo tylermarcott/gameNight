@@ -1,10 +1,17 @@
+
+
+
+
+
 import { AppState } from "../AppState.js";
 import { Value } from "../models/Value.js";
 import { saveState } from "../utils/Store.js";
 
+
 function save() {
   saveState('values', AppState.values)
 }
+
 
 class ValuesService {
   removeAll() {

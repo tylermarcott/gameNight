@@ -30,7 +30,7 @@ export class PlayersController {
 
 
 
-  scorePoint() {
-    console.log('clicked')
+  scorePoint(playerName) {
+    console.log(playerName, 'clicked the button')
   }
 }
