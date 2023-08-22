@@ -15,9 +15,9 @@ class ObservableAppState extends EventEmitter {
 
   // NOTE: created 3 new instances of the player class
   players = [
-    new Player("Shirley"),
-    new Player("Jeff"),
-    new Player("Bobbie Boy")
+    new Player('Shirley'),
+    new Player('Jeff'),
+    new Player('Bobbie Boy')
   ];
 
   page = ''

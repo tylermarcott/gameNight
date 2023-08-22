@@ -9,4 +9,19 @@ export class Player {
     // score defaulted to start at 0
     this.score = 0
   }
+
+  get playerTemplateCard() {
+
+
+    console.log('returning template')
+
+
+    return `
+    <div class="card">
+        <div class="card-body">
+          ${this.name} - ${this.score}
+        </div>
+        <button class="btn" onclick="app.PlayersController.scorePoint()">Bootin!</button>
+    </div>`
+  }
 }

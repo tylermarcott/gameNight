@@ -18,10 +18,13 @@ export const router = [
 
   {
     path: '',
-    controller: [HomeController, PlayersController],
+    controller: [/*HomeController,*/ PlayersController],
     // if we want to throw the PlayersController in here with the HomeController we need to clear out the view
     // NOTE: I think this is where I will put in my template to draw to the DOM?
-    view: /*html*/``
+    view: /*html*/`
+      <div>It's time for players!</div>
+      <section class="row" id="players"></section>
+    `
   },
   {
     path: '#/about',
